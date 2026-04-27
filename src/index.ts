@@ -9,7 +9,7 @@ async function main(): Promise<void> {
   console.log(JSON.stringify(payload, null, 2));
 
   const { error } = await supabase
-    .from("telemetry_backup")
+    .from("telemetry")
     .insert(payload);
 
   if (error) {
